@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-        jdk 'jdk-8'
+        jdk 'oracejava8'
     }
 
     stages {
@@ -16,8 +16,8 @@ pipeline {
             steps {
                 echo 'scanning project'
 			    sh '''mvn sonar:sonar \\
-  -Dsonar.host.url=http://3.83.18.215:9000 \\
-  -Dsonar.login=ae71c2e5c7b3c5932dea385c16eb074bd9ad764d'''
+  -Dsonar.host.url=http://34.224.3.237:9000 \\
+  -Dsonar.login=cf26c39512c647a6379adbfaa930b3f36e7b0110'''
             }
         }
 		
